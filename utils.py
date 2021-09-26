@@ -1,5 +1,4 @@
 import jqdatasdk as jq
-from concurrent.futures import ThreadPoolExecutor, as_completed
 import pandas as pd
 from six import Iterator
 import yaml
