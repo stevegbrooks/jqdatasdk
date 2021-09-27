@@ -9,16 +9,21 @@ import unittest
 
 class TestInputs(unittest.TestCase):
     
-    def test_get_price(self):
+    def test_get_price_definition(self):
         """
         Test that the get_price function's first param is called 'tickers'.
         (This is the only test needed for this function.)
         """
         #tests that its called 'tickers'
-        jq.get_price(tickers = ['000001.XSHE', '000002.XSHE'], count = 1)
+        jq.get_price(tickers = '000001.XSHE', count = 1)
         #tests that its first
-        jq.get_price(['000001.XSHE', '000002.XSHE'], count = 1)
-        #tests that passing a single ticker has the same output as a list of tickers of len = 1
+        jq.get_price('000001.XSHE', count = 1)
+
+    def test_get_price_tickers_param(self):
+        """
+        Tests that passing a single ticker has the same output 
+        as a list of tickers of len = 1
+        """
         df_actual = jq.get_price('000001.XSHE', count = 1)
         df_expected = jq.get_price(['000001.XSHE'], count = 1)
         self.assertTrue(df_actual.equals(df_expected))
