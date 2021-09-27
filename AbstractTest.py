@@ -13,6 +13,8 @@ class TestWaffleWrap(unittest.TestCase):
         self.function(tickers = '000001.XSHE', count = 1)
         #tickers is first param
         self.function('000001.XSHE', count = 1)
+        #TODO: add more tests
+        
     
     def test_tickers_param(self):
         """
