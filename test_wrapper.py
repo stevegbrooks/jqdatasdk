@@ -12,7 +12,7 @@ class TestInputs(unittest.TestCase):
     def test_get_price_definition(self):
         """
         Test that the get_price function's first param is called 'tickers'.
-        (This is the only test needed for this function.)
+        (This is the only func def test needed for this function.)
         """
         #tests that its called 'tickers'
         jq.get_price(tickers = '000001.XSHE', count = 1)
